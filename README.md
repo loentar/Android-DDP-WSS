@@ -77,3 +77,25 @@ Example of nginx configuration to establish reverse proxy to Meteor:
         }
 
         mMeteor = new Meteor(context, serverUrl, null, options);
+
+## Build library from source code
+
+Clone the repo:
+
+    git clone https://github.com/loentar/Android-DDP-WSS.git
+    cd Android-DDP-WSS
+
+Build the project using gradle wrapper:
+
+Under Linux:
+
+    ./gradlew build
+
+Under Windows:
+
+    gradlew.bat build
+
+
+jar library will be placed into `lib/build/intermediates/bundles/release/classes.jar`.
+
+aar library will be placed into `lib/build/outputs/aar/lib-release.aar`.
