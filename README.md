@@ -12,10 +12,18 @@ The Android-DDP's interface mailny leaved unchanged in exception of just one new
 
 
 To migrate your app to WSS you just need to:
+
+  1. replace `Android-DDP.jar` with [Android-DDP-WSS.jar](https://github.com/loentar/Android-DDP-WSS/releases/download/v1.0.0/Android-DDP-WSS.jar) in your app;
   
-  1. replace `Android-DDP.jar` with `Android-DDP-WSS.jar` in your app;
+  3. add dependencies into your `app/build.gradle`:
+
+        dependencies {
+            // .....
+            compile 'org.codehaus.jackson:jackson-core-asl:1.9.13'
+            compile 'org.codehaus.jackson:jackson-mapper-asl:1.9.13'
+
+  3. change `ws://` to `wss://` in server URL.
   
-  2. change `ws://` to `wss://` in server URL.
   
 Plain WS is supported by this library as well, of course.
 
